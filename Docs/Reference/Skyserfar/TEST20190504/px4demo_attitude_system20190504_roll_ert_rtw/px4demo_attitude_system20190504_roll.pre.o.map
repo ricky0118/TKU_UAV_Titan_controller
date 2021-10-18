@@ -1,0 +1,417 @@
+Archive member included because of file (symbol)
+
+./px4demo_attitude_control20190311roll_rtwlib.lib(px4demo_attitude_control20190311roll.o)
+                              px4demo_attitude_system20190504_roll.o (px4demo_attitude_control2019031)
+./px4demo_attitude_control20190311roll_rtwlib.lib(px4demo_attitude_control20190311roll_data.o)
+                              ./px4demo_attitude_control20190311roll_rtwlib.lib(px4demo_attitude_control20190311roll.o) (px4demo_attitude_control_ConstB)
+../slprj/ert/_sharedutils/rtwshared.lib(rt_roundf_snf.o)
+                              ./px4demo_attitude_control20190311roll_rtwlib.lib(px4demo_attitude_control20190311roll.o) (rt_roundf_snf)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD PX4_sysobj_serial.o
+LOAD px4demo_attitude_system20190504_roll.o
+LOAD px4demo_attitude_system20190504_roll_data.o
+LOAD nuttxinitialize.o
+LOAD ert_main.o
+START GROUP
+LOAD ./px4demo_attitude_control20190311roll_rtwlib.lib
+END GROUP
+LOAD ../slprj/ert/_sharedutils/rtwshared.lib
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000     0x3088
+ *(.text .stub)
+ .text          0x00000000      0x594 PX4_sysobj_serial.o
+                0x00000000                MW_openSerialPort
+                0x00000124                MW_closeSerialPort
+                0x000001b8                initSerial
+                0x000003a4                MW_writeSerial
+                0x000003d4                MW_writeSerial_Header
+                0x00000420                MW_readSerial
+                0x0000045c                MW_readSerial_TermCheck
+                0x00000560                termSerial
+ .text          0x00000594     0x1054 px4demo_attitude_system20190504_roll.o
+                0x0000066c                px4demo_attitude_system20190504_roll_step
+                0x00000ef8                px4demo_attitude_system20190504_roll_initialize
+                0x000013fc                px4demo_attitude_system20190504_roll_terminate
+ .text          0x000015e8        0x0 px4demo_attitude_system20190504_roll_data.o
+ .text          0x000015e8      0x678 nuttxinitialize.o
+                0x000015e8                setTaskPeriod
+                0x0000174c                myWaitForThisEvent
+                0x00001780                myAddBlockForThisEvent
+                0x000017f8                nuttxRTOSInit
+ .text          0x00001c60      0x418 ert_main.o
+                0x00001c60                baseRateTask
+                0x00001cf4                exitTask
+                0x00001d10                terminateTask
+                0x00001d90                SpawnThreads_Task
+                0x00001de8                ShutDown_Procedure
+                0x00001e88                px4_simulink_app_main
+ .text          0x00002078      0xf38 ./px4demo_attitude_control20190311roll_rtwlib.lib(px4demo_attitude_control20190311roll.o)
+                0x00002078                px4demo_attitud_MATLABFunction1
+                0x000020b4                px4demo_attitud_MATLABFunction2
+                0x000020f4                px4demo_attitude_contr_pwm_out1
+                0x000022c0                px4demo_attitude_control2019031
+                0x00002f50                px4demo_attitude_con_initialize
+ .text          0x00002fb0        0x0 ./px4demo_attitude_control20190311roll_rtwlib.lib(px4demo_attitude_control20190311roll_data.o)
+ .text          0x00002fb0       0xd8 ../slprj/ert/_sharedutils/rtwshared.lib(rt_roundf_snf.o)
+                0x00002fb0                rt_roundf_snf
+ *(.gnu.warning)
+
+.fini
+ *(.fini)
+
+.rodata         0x00000000      0x820
+ *(.rodata)
+ .rodata        0x00000000       0xf4 PX4_sysobj_serial.o
+ .rodata        0x000000f4      0x204 px4demo_attitude_system20190504_roll.o
+                0x00000105                px4demo_attitude_system20190504_roll_U8GND
+                0x00000108                px4demo_attitude_system20190_M
+ .rodata        0x000002f8        0x8 px4demo_attitude_system20190504_roll_data.o
+                0x000002f8                px4demo_attitude_system2_ConstB
+ .rodata        0x00000300      0x2d4 nuttxinitialize.o
+ .rodata        0x000005d4      0x208 ert_main.o
+ *fill*         0x000007dc        0x4 00
+ .rodata        0x000007e0       0x40 ./px4demo_attitude_control20190311roll_rtwlib.lib(px4demo_attitude_control20190311roll_data.o)
+                0x000007e0                px4demo_attitude_control_ConstB
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x8
+ *(.data)
+ .data          0x00000000        0x0 PX4_sysobj_serial.o
+ .data          0x00000000        0x8 px4demo_attitude_system20190504_roll.o
+                0x00000000                g_pwm_device
+                0x00000004                g_pwm_fd
+ .data          0x00000008        0x0 px4demo_attitude_system20190504_roll_data.o
+ .data          0x00000008        0x0 nuttxinitialize.o
+ .data          0x00000008        0x0 ert_main.o
+ .data          0x00000008        0x0 ./px4demo_attitude_control20190311roll_rtwlib.lib(px4demo_attitude_control20190311roll.o)
+ .data          0x00000008        0x0 ./px4demo_attitude_control20190311roll_rtwlib.lib(px4demo_attitude_control20190311roll_data.o)
+ .data          0x00000008        0x0 ../slprj/ert/_sharedutils/rtwshared.lib(rt_roundf_snf.o)
+
+.data1
+ *(.data1)
+
+.bss            0x00000000      0x328
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000       0x50 PX4_sysobj_serial.o
+                0x00000000                FdArray
+                0x00000028                DeviceNameList
+ .bss           0x00000050      0x240 px4demo_attitude_system20190504_roll.o
+                0x00000050                g_pwm_enabled
+                0x00000054                px4demo_attitude_sys_TimingBrdg
+                0x00000070                px4demo_attitude_system201905_B
+                0x00000138                px4demo_attitude_system20190_DW
+                0x00000270                px4demo_attitude_system20190_M_
+ .bss           0x00000290        0x0 px4demo_attitude_system20190504_roll_data.o
+ .bss           0x00000290       0x50 nuttxinitialize.o
+                0x00000290                attr
+                0x000002a8                g_sp
+                0x000002ac                g_baseRateLife
+                0x000002b0                BaseRate_HRT
+                0x000002d0                EXT_sig_info
+ .bss           0x000002e0       0x3c ert_main.o
+                0x000002e0                stopSem
+                0x000002ec                termSem
+                0x000002f8                baserateTaskSem
+                0x00000304                Thread_Spawner_Task_Sem
+                0x00000310                terminateThread
+                0x00000312                schedulerThread
+                0x00000314                baseRateThread
+                0x00000318                subratePriority
+ .bss           0x0000031c        0xc ./px4demo_attitude_control20190311roll_rtwlib.lib(px4demo_attitude_control20190311roll.o)
+                0x0000031c                px4demo_attitude_cont_GlobalTID
+                0x00000324                px4demo_attitude_con_TimingBrdg
+ .bss           0x00000328        0x0 ./px4demo_attitude_control20190311roll_rtwlib.lib(px4demo_attitude_control20190311roll_data.o)
+ .bss           0x00000328        0x0 ../slprj/ert/_sharedutils/rtwshared.lib(rt_roundf_snf.o)
+ *(COMMON)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x388
+ *(.comment)
+ .comment       0x00000000       0x71 PX4_sysobj_serial.o
+ .comment       0x00000071       0x71 px4demo_attitude_system20190504_roll.o
+ .comment       0x000000e2       0x71 px4demo_attitude_system20190504_roll_data.o
+ .comment       0x00000153       0x71 nuttxinitialize.o
+ .comment       0x000001c4       0x71 ert_main.o
+ .comment       0x00000235       0x71 ./px4demo_attitude_control20190311roll_rtwlib.lib(px4demo_attitude_control20190311roll.o)
+ .comment       0x000002a6       0x71 ./px4demo_attitude_control20190311roll_rtwlib.lib(px4demo_attitude_control20190311roll_data.o)
+ .comment       0x00000317       0x71 ../slprj/ert/_sharedutils/rtwshared.lib(rt_roundf_snf.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x3b
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x3b PX4_sysobj_serial.o
+ .ARM.attributes
+                0x0000003b       0x3b px4demo_attitude_system20190504_roll.o
+ .ARM.attributes
+                0x00000076       0x3b px4demo_attitude_system20190504_roll_data.o
+ .ARM.attributes
+                0x000000b1       0x3b nuttxinitialize.o
+ .ARM.attributes
+                0x000000ec       0x3b ert_main.o
+ .ARM.attributes
+                0x00000127       0x3b ./px4demo_attitude_control20190311roll_rtwlib.lib(px4demo_attitude_control20190311roll.o)
+ .ARM.attributes
+                0x00000162       0x3b ./px4demo_attitude_control20190311roll_rtwlib.lib(px4demo_attitude_control20190311roll_data.o)
+ .ARM.attributes
+                0x0000019d       0x3b ../slprj/ert/_sharedutils/rtwshared.lib(rt_roundf_snf.o)
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(../px4demo_attitude_system20190504_roll.pre.o elf32-littlearm)

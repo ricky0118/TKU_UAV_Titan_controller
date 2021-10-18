@@ -1,0 +1,20 @@
+CC     = "C:\Program Files\MATLAB\R2016b\sys\lcc64\lcc64\bin\lcc64.exe"
+LD     = "C:\Program Files\MATLAB\R2016b\sys\lcc64\lcc64\bin\lcclnk64.exe"
+LIBCMD = "C:\Program Files\MATLAB\R2016b\sys\lcc64\lcc64\bin\lcclib64.exe"
+CFLAGS = -dll -noregistrylookup  -c -Zp8 -DLCC_WIN64 -DMATLAB_MEX_FILE -DMX_COMPAT_32 -nodeclspec 
+LDFLAGS = -s -dll -L"C:\Program Files\MATLAB\R2016b\sys\lcc64\lcc64\lib64" -entry LibMain -map sfun.map 
+LIBFLAGS = 
+
+OBJECTS = \
+	"pixhawk_slib_misc_utils_sfun.obj"\
+	"c3_pixhawk_slib_misc_utils.obj"\
+
+INCLUDE_PATH= -I"C:\Program Files\MATLAB\R2016b\sys\lcc64\lcc64\include64"  -I"C:\Program Files\MATLAB\R2016b\extern\include"  -I"C:\Program Files\MATLAB\R2016b\simulink\include"  -I"C:\Program Files\MATLAB\R2016b\simulink\include\sf_runtime"  -I"C:\Program Files\MATLAB\R2016b\stateflow\c\mex\include"  -I"C:\Program Files\MATLAB\R2016b\rtw\c\src"  -I"C:\Users\DELL\Desktop\TEST20190504\slprj\_sfprj\px4demo_attitude_system20190504_roll\pixhawk_slib_misc_utils\sfun\src" 
+ 
+
+pixhawk_slib_misc_utils_sfun.lib : $(MAKEFILE) $(OBJECTS)
+	$(LIBCMD) $(LIBFLAGS) /OUT:pixhawk_slib_misc_utils_sfun.lib *.obj
+pixhawk_slib_misc_utils_sfun.obj :	"pixhawk_slib_misc_utils_sfun.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "pixhawk_slib_misc_utils_sfun.c"
+c3_pixhawk_slib_misc_utils.obj :	"c3_pixhawk_slib_misc_utils.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c3_pixhawk_slib_misc_utils.c"

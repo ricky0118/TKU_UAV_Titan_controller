@@ -1,0 +1,350 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD px4demo_attitude_control20190311gps.o
+LOAD nuttxinitialize.o
+LOAD ert_main.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000     0x2e98
+ *(.text .stub)
+ .text          0x00000000     0x2408 px4demo_attitude_control20190311gps.o
+                0x00000078                rt_roundf_snf
+                0x00000150                px4demo_attitud_MATLABFunction1
+                0x0000018c                px4demo_attitud_MATLABFunction2
+                0x000001cc                px4demo_attitude_contr_pwm_out1
+                0x00000398                px4demo_attitude_control20190311gps_step
+                0x00002370                px4demo_attitude_control20190311gps_initialize
+                0x000023f8                px4demo_attitude_control20190311gps_terminate
+ .text          0x00002408      0x678 nuttxinitialize.o
+                0x00002408                setTaskPeriod
+                0x0000256c                myWaitForThisEvent
+                0x000025a0                myAddBlockForThisEvent
+                0x00002618                nuttxRTOSInit
+ .text          0x00002a80      0x418 ert_main.o
+                0x00002a80                baseRateTask
+                0x00002b14                exitTask
+                0x00002b30                terminateTask
+                0x00002bb0                SpawnThreads_Task
+                0x00002c08                ShutDown_Procedure
+                0x00002ca8                px4_simulink_app_main
+ *(.gnu.warning)
+
+.fini
+ *(.fini)
+
+.rodata         0x00000000      0x4f0
+ *(.rodata)
+ .rodata        0x00000000       0x14 px4demo_attitude_control20190311gps.o
+                0x00000000                px4demo_attitude_control2019_M
+ .rodata        0x00000014      0x2d4 nuttxinitialize.o
+ .rodata        0x000002e8      0x208 ert_main.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 px4demo_attitude_control20190311gps.o
+ .data          0x00000000        0x0 nuttxinitialize.o
+ .data          0x00000000        0x0 ert_main.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000      0x21c
+ *(.dynbss)
+ *(.bss)
+ .bss           0x00000000      0x190 px4demo_attitude_control20190311gps.o
+                0x00000000                px4demo_attitude_control20190_B
+                0x000000c8                px4demo_attitude_control2019_DW
+                0x00000110                px4demo_attitude_control20190_U
+                0x00000140                px4demo_attitude_control20190_Y
+                0x00000180                px4demo_attitude_control2019_M_
+ .bss           0x00000190       0x50 nuttxinitialize.o
+                0x00000190                attr
+                0x000001a8                g_sp
+                0x000001ac                g_baseRateLife
+                0x000001b0                BaseRate_HRT
+                0x000001d0                EXT_sig_info
+ .bss           0x000001e0       0x3c ert_main.o
+                0x000001e0                stopSem
+                0x000001ec                termSem
+                0x000001f8                baserateTaskSem
+                0x00000204                Thread_Spawner_Task_Sem
+                0x00000210                terminateThread
+                0x00000212                schedulerThread
+                0x00000214                baseRateThread
+                0x00000218                subratePriority
+ *(COMMON)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x153
+ *(.comment)
+ .comment       0x00000000       0x71 px4demo_attitude_control20190311gps.o
+ .comment       0x00000071       0x71 nuttxinitialize.o
+ .comment       0x000000e2       0x71 ert_main.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.stack
+ *(.stack)
+
+.ARM.attributes
+                0x00000000       0x3b
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x3b px4demo_attitude_control20190311gps.o
+ .ARM.attributes
+                0x0000003b       0x3b nuttxinitialize.o
+ .ARM.attributes
+                0x00000076       0x3b ert_main.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(../px4demo_attitude_control20190311gps.pre.o elf32-littlearm)

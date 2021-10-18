@@ -1,0 +1,3 @@
+LIBRARY pixhawk_slib_misc_utils_sfun.lib
+EXPORTS
+mexFunction
